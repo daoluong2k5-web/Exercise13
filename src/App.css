@@ -1,0 +1,365 @@
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary: #64748b;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --danger: #ef4444;
+  --success: #10b981;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+}
+
+/* Tabs */
+.tab-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.tab-button {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-main);
+}
+
+.tab-button:hover {
+  background: #f1f5f9;
+}
+
+.tab-button.active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+/* Exercises layout */
+.exercises-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.exercise-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-header h2 {
+  font-size: 1.4rem;
+  margin: 4px 0 8px 0;
+  color: #0f172a;
+}
+
+.card-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.card-desc code {
+  background: #e2e8f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: #0f172a;
+}
+
+/* Controls */
+.controls-panel {
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.control-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-outline {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+.btn-outline:hover {
+  background-color: #f1f5f9;
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: #ffffff;
+}
+
+.btn-success {
+  background-color: var(--success);
+  color: #ffffff;
+}
+
+.number-input {
+  width: 90px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.status-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.placeholder-box {
+  padding: 30px;
+  background: #f1f5f9;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.hint-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Exercise 1 - UserPosts */
+.user-posts-container h3 {
+  margin-top: 0;
+  color: #1e293b;
+}
+
+.loading-state {
+  color: var(--primary);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.post-card {
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid var(--primary);
+  border-radius: 6px;
+}
+
+.post-card h4 {
+  margin: 0 0 8px 0;
+  text-transform: capitalize;
+  color: #0f172a;
+}
+
+.post-card p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* Exercise 2 - CountdownTimer */
+.countdown-timer-container {
+  text-align: center;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.timer-display {
+  font-size: 2rem;
+  margin: 0;
+  color: #0f172a;
+  letter-spacing: 0.5px;
+}
+
+.timer-finished {
+  color: var(--danger);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* Exercise 3 - WindowSize */
+.window-size-container {
+  padding: 24px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.window-size-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0;
+}
+
+/* Exercise 4 - ValidatedInput (Matches docx classes: error, error-message) */
+.form-demo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-example {
+  padding: 16px;
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.form-example h4 {
+  margin: 0 0 6px 0;
+  color: #0f172a;
+}
+
+.validated-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.validated-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.validated-input-container input {
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  max-width: 450px;
+}
+
+.validated-input-container input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.validated-input-container input.error {
+  border-color: var(--danger);
+  background-color: #fef2f2;
+}
+
+.validated-input-container input.error:focus {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.error-message {
+  color: var(--danger);
+  font-size: 0.85rem;
+  margin: 4px 0 0 0;
+  font-weight: 500;
+}
